@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_touch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@+id/judgeview"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:gravity="center_horizontal"
+            android:text="@string/draw_screen"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/red" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dip"
+            android:src="@drawable/draw_screen" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:gravity="center_horizontal"
+            android:text="@string/draw_notify"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <com.android.factorytest.view.LineLocationView
+        android:id="@+id/lv_touch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+    <com.android.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

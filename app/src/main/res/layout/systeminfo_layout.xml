@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/judgeview"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:gravity="center_horizontal"
+            android:text="@string/systeminfo"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/red" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/systeminfo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dip"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/imei"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_device_sn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/kernel_ver"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_kernel_version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/system_ver"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_system_version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/software_ver"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_software_version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/baseband_ver"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_baseband_version"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_filename"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:editable="false"
+                        android:hint="@string/select_file" />
+
+                    <Button
+                        android:id="@+id/btn_update"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/system_upgrade" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/prg_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.android.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

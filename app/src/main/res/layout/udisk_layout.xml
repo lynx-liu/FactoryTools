@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10.0dip"
+        android:text="@string/udisk"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/red" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/judgeview"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/udisk" />
+
+        <LinearLayout
+            android:layout_width="300dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/free_capacity"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/total_capacity"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:gravity="left"
+                    android:text="@string/flash"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+               
+                <TextView
+                    android:id="@+id/txt_ddr_free"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="0MB"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+                                
+                <TextView
+                    android:id="@+id/txt_ddr_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="0MB"
+                    android:singleLine="true"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/usb_storage"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/txt_udisk_free"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="0MB"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/txt_udisk_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="0MB"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/red"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_usbhost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:text="@string/host"
+                android:textColor="@color/black"
+                android:textSize="16.0sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.android.factorytest.view.JudgeView
+        android:id="@+id/judgeview"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

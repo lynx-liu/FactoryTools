@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    def platformType = getPlatform()
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.android.factorytest"
+        minSdkVersion 23
+        //noinspection ExpiredTargetSdkVersion,ExpiredTargetSdkVersion
+        targetSdkVersion 29
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+
+        if(platformType != "aosp_x86_64") {
+            ndk {
+                abiFilter "armeabi"
+            }
+        }
+    }
+
+    signingConfigs {
+        if(platformType == "vrviu_x86_64") {
+            release {
+                storeFile file("vrviu.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+
+            debug {
+                storeFile file("vrviu.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+        } else if(platformType.equals("aosp_x86_64")) {
+            release {
+                storeFile file("android10.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+
+            debug {
+                storeFile file("android10.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+        } else {
+            release {
+                storeFile file("kona.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+
+            debug {
+                storeFile file("kona.keystore")
+                storePassword '123456'
+                keyAlias 'platform'
+                keyPassword '123456'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles 'proguard.cfg'
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+    }
+}
+
+def static getPlatform() {
+    def adbCommand = 'adb shell getprop ro.product.name'
+    Process process = adbCommand.execute()
+    process.in.eachLine { processing ->
+        println processing
+        return processing
+    }
+}
+
+dependencies {
+    implementation 'com.github.angads25:filepicker:1.1.1'
+    implementation 'com.github.lzyzsd.randomcolor:library:1.0.0'
+    implementation files('libs/PdsManager.jar')
+}
